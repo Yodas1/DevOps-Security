@@ -28,6 +28,7 @@ jobs:
           push: true
           tags: |
             536733/student-app:latest
+            
   test:
     name: Test
     needs: [ build ]
