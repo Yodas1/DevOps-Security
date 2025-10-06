@@ -2,6 +2,10 @@ name: CI/CD
 
 on: push
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   
   build:
@@ -84,3 +88,18 @@ jobs:
               sudo kubectl delete deployment --all              
               sudo kubectl apply -f ${{ github.workspace }}/kubernetes/deployment.yaml --force
               sudo kubectl apply -f ${{ github.workspace }}/kubernetes/nginx-service.yaml --force
+
+postman-tests:
+  name: Automated API tests using Postman CLI
+  needs: [ deploy ]
+  runs-on: ubuntu:latest
+  steps:
+    - uses: actions/checkout@v4
+    - name: Install Postman CLI
+      run: |
+        curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+    - name: Login to Postman CLI
+      run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+    - name: Run API tests
+      run: |
+        postman collection run "49042546-eb522c62-2e55-4dec-9840-86adf57803e9"
