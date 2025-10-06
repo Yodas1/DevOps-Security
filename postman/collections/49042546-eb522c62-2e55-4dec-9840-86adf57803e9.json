@@ -1,0 +1,21 @@
+{
+	"info": {
+		"_postman_id": "49042546-eb522c62-2e55-4dec-9840-86adf57803e9",
+		"name": "DevSecOps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"id": "49042546-87e376f9-a9b1-4297-ac76-612baf6ab461",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
