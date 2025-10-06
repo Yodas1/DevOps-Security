@@ -92,7 +92,7 @@ jobs:
   postman-test:
     name: Automated API tests using Postman CLI
     needs: [ deploy ]
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Install Postman CLI
