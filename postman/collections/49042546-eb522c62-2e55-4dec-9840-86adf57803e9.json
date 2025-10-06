@@ -7,13 +7,48 @@
 	"item": [
 		{
 			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cba8d61f-7a3e-45b6-bd56-5f8e50823d09",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Content-Security-Policy present (basic presence check)\r",
+							"pm.test(\"Content-Security-Policy present\", () => {\r",
+							"    pm.expect(h(\"Content-Security-Policy\").length).to.be.greaterThan(0);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
 			"id": "49042546-87e376f9-a9b1-4297-ac76-612baf6ab461",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://54.224.223.155:30000/",
+					"protocol": "http",
+					"host": [
+						"54",
+						"224",
+						"223",
+						"155"
+					],
+					"port": "30000",
+					"path": [
+						""
+					]
+				}
 			},
 			"response": []
 		}
