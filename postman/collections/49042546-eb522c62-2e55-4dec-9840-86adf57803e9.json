@@ -53,29 +53,8 @@
 			"response": []
 		},
 		{
-			"name": "Week7",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "cba8d61f-7a3e-45b6-bd56-5f8e50823d09",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"// Content-Security-Policy present (basic presence check)\r",
-							"pm.test(\"Content-Security-Policy present\", () => {\r",
-							"    pm.expect(h(\"Content-Security-Policy\").length).to.be.greaterThan(0);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"packages": {},
-						"requests": {}
-					}
-				}
-			],
-			"id": "49042546-f1843a8c-0755-41dc-a946-ff63e79f08ca",
+			"name": "http://54.221.133.156:6443/ap/v1/namsepaces",
+			"id": "49042546-10340718-fe99-4ea4-ba77-1a142a8156a1",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -93,7 +72,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://54.221.133.156:6443/ap/v1/namsepace",
+					"raw": "http://54.221.133.156:6443/ap/v1/namsepaces",
 					"protocol": "http",
 					"host": [
 						"54",
@@ -105,7 +84,7 @@
 					"path": [
 						"ap",
 						"v1",
-						"namsepace"
+						"namsepaces"
 					]
 				}
 			},
