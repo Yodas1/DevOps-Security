@@ -80,20 +80,32 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://54.224.223.155:30000/",
+					"raw": "http://54.221.133.156:6443/ap/v1/namsepace",
 					"protocol": "http",
 					"host": [
 						"54",
-						"224",
-						"223",
-						"155"
+						"221",
+						"133",
+						"156"
 					],
-					"port": "30000",
+					"port": "6443",
 					"path": [
-						""
+						"ap",
+						"v1",
+						"namsepace"
 					]
 				}
 			},
